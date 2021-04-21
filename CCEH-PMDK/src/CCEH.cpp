@@ -11,6 +11,8 @@
 
 #define f_seed 0xc70697UL
 #define s_seed 0xc70697UL
+
+#define INPLACE
 //#define f_seed 0xc70f6907UL
 //#define s_seed 0xc70f6907UL
 
@@ -257,8 +259,8 @@ RETRY:
     D_RW(target)->unlock();
 
     if(!D_RW(target)->suspend()){
-	std::this_thread::yield();
-	goto RETRY;
+		std::this_thread::yield();
+		goto RETRY;
     }
 
     /* need to check whether the target segment has been split */

@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		"Makeflie": "makefile",
+		"mutex": "cpp",
+		"shared_mutex": "cpp",
+		"thread": "cpp"
+	}
+}
